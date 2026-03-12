@@ -182,7 +182,7 @@ endif()
 if(NOT APPLE)
     find_package(Vulkan)
     if(Vulkan_FOUND)
-        add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/ml/backend/ggml/ggml/src/ggml-vulkan)
+        
         target_include_directories(ggml-vulkan PRIVATE ${GGML_INCLUDE_DIRS})
         install(TARGETS ggml-vulkan
             RUNTIME_DEPENDENCIES
